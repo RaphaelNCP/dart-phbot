@@ -9,6 +9,14 @@ void main() async {
   var a = true;
   String usuario = '';
 
+  var myStream = BotClock().phBotStream(1, 10);
+  var subscriber = myStream.listen((event) {
+    print('                                              PhBot is activated for $event seconds');
+  }, onDone: (){
+    print("PhBot is finishing its work, ask the last question");
+    a = false;
+  });
+
   print('-- Iniciando o phBot, aguarde..--');
 
   await BotClock().clock(2);

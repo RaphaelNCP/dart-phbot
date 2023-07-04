@@ -41,7 +41,7 @@ void main() async {
       BotClock().clock(2);
       
       TimeQuestions(usuario).timeQuestion();
-    } else if (GoodManners(usuario).isThisGoodManners) {
+    } else if (GoodManners(usuario).isthisManners()) {
       GoodManners(usuario).goodManners();
     } else if (false) {
       //Basta adicionar novas perguntas aqui!

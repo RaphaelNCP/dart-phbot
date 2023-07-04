@@ -29,15 +29,15 @@ class GoodManners{
   }
 
   goodManners(){
-    if(question.contains('Bom dia')|| question.contains('bom dia')){
+    if(question.contains("Bom dia")|| question.contains("bom dia")){
       print(phBot + " Bom dia, oh grande usuário");
-    } else if (question.contains('Bom tarde')|| question.contains('bom tarde')){
+    } else if (question.contains("Bom tarde")|| question.contains("bom tarde")){
       print(phBot + " Bom tarde, oh grande usuário");
-    } else if (question.contains('Bom noite')|| question.contains('bom noite')){
+    } else if (question.contains("Bom noite")|| question.contains("bom noite")){
       print(phBot + " Bom noite, oh grande usuário");
-    } else if (question.contains('oi')|| question.contains('Oi')|| question.contains("ola")||question.contains("Ola")){
+    } else if (question.contains("oi")|| question.contains("Oi")|| question.contains("ola")||question.contains("Ola")){
       print(phBot + " Saudações, oh grande usuário");
-    } else if (question.contains('obrigado')|| question.contains('Obrigado')|| question.contains("Obrigada")|| question.contains("obrigada")){
+    } else if (question.contains("obrigado")|| question.contains("Obrigado")|| question.contains("Obrigada")|| question.contains("obrigada")){
       print(phBot + " Ao seu dispor");
     }
   }

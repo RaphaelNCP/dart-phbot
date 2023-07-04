@@ -1,6 +1,6 @@
-
 import 'dart:io';
 
+import 'questions/good_manners.dart';
 import 'questions/time_questions.dart';
 import 'timing/waiting_time.dart';
 
@@ -9,13 +9,14 @@ void main() async {
   var a = true;
   String usuario = '';
 
-  var myStream = BotClock().phBotStream(1, 10);
+  /*var myStream = BotClock().phBotStream(1, 10);
+  // ignore: unused_local_variable
   var subscriber = myStream.listen((event) {
-    print('                                              PhBot is activated for $event seconds');
+    print('                                              PhBot está ativo a $event secondos');
   }, onDone: (){
-    print("PhBot is finishing its work, ask the last question");
+    print("PhBot está finalizando, faça sua ultima pergunta");
     a = false;
-  });
+  });*/
 
   print('-- Iniciando o phBot, aguarde..--');
 
@@ -40,13 +41,15 @@ void main() async {
       BotClock().clock(2);
       
       TimeQuestions(usuario).timeQuestion();
+    } else if (GoodManners(usuario).isThisGoodManners) {
+      GoodManners(usuario).goodManners();
     } else if (false) {
       //Basta adicionar novas perguntas aqui!
     } else {
       await BotClock().clock(2);
       print(phBot +
-          ' Não fui treinado para responder a essa pergunta \n Desculpe :( ');
-      print(phBot + ' Você pode fazer outra pergunta ou dizer Adeus');
+          ' Não tenho conhecimento de como responder isso \n Sinto muito ');
+      print(phBot + ' Ainda precisa dos meu conhecimentos ou vai dizer Adeus?');
     }
   } while (a);
 

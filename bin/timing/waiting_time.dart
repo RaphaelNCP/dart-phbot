@@ -12,5 +12,4 @@ class BotClock {
       yield i++;
     }
   }
-
 }
